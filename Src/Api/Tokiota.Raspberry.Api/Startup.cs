@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Tokiota.Raspberry.Api.Extensions;
 
 namespace Tokiota.Raspberry.Api
 {
@@ -27,6 +28,7 @@ namespace Tokiota.Raspberry.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSwagger();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -34,6 +36,7 @@ namespace Tokiota.Raspberry.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseSwaggerAndUI();
             app.UseMvc();
             app.UseWelcomePage();
         }
