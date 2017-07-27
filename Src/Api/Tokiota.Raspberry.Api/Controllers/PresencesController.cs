@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Tokiota.Raspberry.Api.Controllers
+﻿namespace Tokiota.Raspberry.Api.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
-    public class PrecencesController : Controller
+    public class PresencesController : Controller
     {
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post()
         {
             // call twitter service
+            return this.Ok(new { message = "POST" });
         }
     }
 }

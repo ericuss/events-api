@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Tokiota.Raspberry.Api.Controllers
+﻿namespace Tokiota.Raspberry.Api.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     public class HelloController : Controller
     {
         // GET api/values
         [HttpGet]
-        public IActionResult  Hello()
+        public IActionResult Get()
         {
             return this.Ok(new { message = "Hello" });
         }
