@@ -3,7 +3,6 @@
 ################################################################################
 
 # Solution 
-*.suo
 .vs
 .vscode
 /.vs
@@ -15,7 +14,6 @@
 **/.vs/**/*
 **/.vscode/**/*
 /packages
-*.xproj.user
 *.project.lock.json
 project.lock.json
 *yarn*
@@ -31,6 +29,8 @@ bin
 # other directories 
 **/publish
 publish
+**/dist
+dist
 
 # js 
 **/node_modules
